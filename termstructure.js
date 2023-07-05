@@ -21,14 +21,20 @@ export function updateTS() {
 
         const layout = {
             autosize: false,
-            width: 700,
+            width: 900,
             height: 400,
             margin: {
                 l: 40,
                 r: 40,
                 b: 60,
-                t: 10,
+                t: 30,
                 pad: 4
+            },
+            title: {
+                xref: 'paper',
+                x:.6,
+                text:'VIX Futures',
+                xanchor:'right',
             },
             font: {
                 size: 12,
@@ -40,6 +46,7 @@ export function updateTS() {
                 gridcolor: '6E6E6E',
                 linecolor: '#FFFFFF',
                 ticks: 'outside',
+                tick0: 0,
                 dtick: 20,
                 tickcolor: '#000'
             },
@@ -49,13 +56,14 @@ export function updateTS() {
                 range: [min_y,max_y],
                 gridcolor: '#6E6E6E',
                 linecolor: '#FFFFFF',
-                dtick: 1
+                dtick: 1,
+               
             },
             plot_bgcolor:'#000000',
             paper_bgcolor:'#000000'
         }
         // plotData.marker.color = plotData.y.map(name=>name==selectedValue? 'orange' :'#5BB2EA')
-        Plotly.newPlot('freqPlot',plotData,layout)
+        Plotly.newPlot('vixFuturesPlot',plotData,layout)
     })
 }
 updateTS();

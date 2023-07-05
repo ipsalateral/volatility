@@ -90,51 +90,51 @@ h6 {
 	margin-bottom:15px;
 }
 
-	/*  links
-	******************************/
-	a {color: #81c266;text-decoration: underline;}
-	a:hover {color: #81c266;text-decoration: none;}
+/*  links
+******************************/
+a {color: #81c266;text-decoration: underline;}
+a:hover {color: #81c266;text-decoration: none;}
 
-	/*  superscript and subscript
-	******************************/
-	sup, sub {vertical-align: baseline;position: relative;top: -0.4em;}
-	sub { top: 0.4em; }
-	
-	/*  lists
-	******************************/
-	ul, ol {padding:0;margin:0;}
-	ul li {list-style-type:disc;}
-	ol li {list-style-type:decimal;}
-	ul li,
-	ol li {font-size: 12px; line-height: 14px;margin: 0 0 10px 15px;}
+/*  superscript and subscript
+******************************/
+sup, sub {vertical-align: baseline;position: relative;top: -0.4em;}
+sub { top: 0.4em; }
 
-	/*  tables
-	tr table row
-	th header cells
-	td data cells
-	******************************/
-	table,th,td {
-		border:1px solid #575C5F;
-		width: 260px;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	th {padding:3px; font-weight:bold;color:#81c266}
-	tr {margin:0 0 5px 0;padding:3px;}
-	td {padding:0px;}
-	th:last-child,td:last-child {
-    text-align: center;
-	}
-	
-	/*  horizontal lines
-	******************************/
-	hr {border-bottom: 1px solid #5F6C73;margin:5px 0;padding:0;height:2px;width:100%; margin-bottom:10px;}
+/*  lists
+******************************/
+ul, ol {padding:0;margin:0;}
+ul li {list-style-type:disc;}
+ol li {list-style-type:decimal;}
+ul li,
+ol li {font-size: 12px; line-height: 14px;margin: 0 0 10px 15px;}
 
-	/* . is for specific areas defined by the class, for example <p class ="clear">
-	will us this formatting */
+/*  tables
+tr table row
+th header cells
+td data cells
+******************************/
+table,th,td {
+	border:1px solid #575C5F;
+	width: 260px;
+	margin-left:auto;
+	margin-right:auto;
+}
+th {padding:3px; font-weight:bold;color:#81c266}
+tr {margin:0 0 5px 0;padding:3px;}
+td {padding:0px;}
+th:last-child,td:last-child {
+text-align: center;
+}
 
-	.clear {
-	clear:both;
+/*  horizontal lines
+******************************/
+hr {border-bottom: 4px solid #5F6C73;margin:5px 0;padding:0;height:2px;width:100%; margin-bottom:10px;}
+
+/* . is for specific areas defined by the class, for example <p class ="clear">
+will use this formatting */
+
+.clear {
+clear:both;
 }
 
 .left {
@@ -153,22 +153,29 @@ h6 {
 	padding:0 0 0 0;
 }
 
+
+#vixFuturesPlot {
+	margin: auto;
+  	width: 50%;
+  	padding: 40px;
+}
 /*----start header----*/
 #header {
-	padding:0px 0px 20px;
+	padding:0px 0px 10px;
 }
 
 #header .top_banner{
-	background:url(../images/binding_screw.png) no-repeat left top;
-	height:190px;
-	padding:60px 95px 0 95px;
-	border:#6C8286 solid 1px;
+	/* background:url(../images/binding_screw.png) no-repeat left top; */
+	height:40px;
+	padding:40px 95px 0 90px;
+	/* border:#6C8286 solid 1px; */
 	margin-bottom:10px;
 }
 
 #header h1{
-	font-size:32px;
-	color:#ff4500;
+	font-size:28px;
+	/* color:#ff4500; */
+	color: #ffffff;
 	margin:0px;
 	padding:0px 0px 10px;
 }

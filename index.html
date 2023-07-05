@@ -7,13 +7,21 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
 </head>
-<body>
-    
-</body>
 
-<div>
-    <h1 id = 'title phrase'>VIX Futures</h1>
-    <div id = 'freqPlot',class = "plotly"></div>
+<body>
+     <!-- begin header -->
+     <div id="header"> 
+        <div class="top_banner">
+            <h1>Volatility Analytics</h1>
+        </div>
+    </div> 
+    <!-- end header -->
+
+    <!-- Horizontal Line -->
+    <hr>
+
+    <div id = 'vixFuturesPlot',class = "plotly"></div>
     <script type = "module" src = termstructure.js></script>
-</div>
+
+</body>
 </html>
