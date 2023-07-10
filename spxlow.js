@@ -2,62 +2,65 @@
 // SelectedValue is like "Ride Warpig" and will be highlighted
 export function updateTS() {
     var plotData;
-    fetch("termstructure.json")
+    fetch("spxlow.json")
     .then(res => res.json())
     .then(data => {plotData = data;})
     .then(() => {
         
         // get the y axis bounds
-        let maxvix = 0;
-        let minvix = 100;
-        for(let i = 0; i<plotData.length;i++){
-            let trace = plotData[i].y;
-            let maxval = Math.max(...trace) // ... is the spread operator
-            let minval = Math.min(...trace)
-            maxvix = Math.max(maxval,maxvix)
-            minvix = Math.min(minval,minvix)
-        }
-        let min_y = Math.floor(minvix-2);
-        let max_y = Math.ceil(maxvix+2);
+        // let maxvix = 0;
+        // let minvix = 100;
+        // for(let i = 0; i<plotData.length;i++){
+        //     let trace = plotData[i].y;
+        //     let maxval = Math.max(...trace) // ... is the spread operator
+        //     let minval = Math.min(...trace)
+        //     maxvix = Math.max(maxval,maxvix)
+        //     minvix = Math.min(minval,minvix)
+        // }
+        // let min_y = Math.floor(minvix-2);
+        // let max_y = Math.ceil(maxvix+2);
 
         const layout = {
-            autosize: false,
+            autosize: true,
             width: 700,
             height: 400,
             margin: {
-                l: 40,
+                l: 50,
                 r: 40,
-                b: 60,
+                b: 50,
                 t: 30,
                 pad: 4
             },
             title: {
                 xref: 'paper',
-                x:.6,
-                text:'VIX Futures',
-                xanchor:'right'
+                x:.9,
+                text:'Wors SPX 1-Month Returns, June 2006-Present',
+                xanchor:'right',
+                
             },
             font: {
                 size: 12,
                 color: '#FFFFFF'
             },
             xaxis: {
-                title: 'Trading Days To Maturity',
+                title: '1-Month Decline in Standard Deviations',
                 color: 'FFFFFF',
                 gridcolor: '6E6E6E',
                 linecolor: '#FFFFFF',
                 ticks: 'outside',
-                tick0: 0,
-                dtick: 20,
+                // tick0: 1,
+                dtick: 1,
                 tickcolor: '#000'
             },
             yaxis: {
-                title: '',
+                title: 'Frequency',
                 color: '#FFFFFF',
-                range: [min_y,max_y],
                 gridcolor: '#6E6E6E',
                 linecolor: '#FFFFFF',
-                dtick: 1,
+                // tick0: 0,
+                range: [0.0,.06],
+                // dtick: .01,
+                tickformat: '0.0%',
                
             },
             legend: {
@@ -69,7 +72,7 @@ export function updateTS() {
             paper_bgcolor:'#000000'
         }
         // plotData.marker.color = plotData.y.map(name=>name==selectedValue? 'orange' :'#5BB2EA')
-        Plotly.newPlot('vixFuturesPlot',plotData,layout)
+        Plotly.newPlot('spxLowPlot',plotData,layout)
     })
 }
 updateTS();

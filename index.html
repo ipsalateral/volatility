@@ -23,5 +23,14 @@
     <div id = 'vixFuturesPlot',class = "plotly"></div>
     <script type = "module" src = termstructure.js></script>
 
+    <div id = 'spxLowPlot',class = "plotly"></div>
+    <script type = "module" src = spxlow.js></script>
+    <p id = 'spxLowPlotText'>
+        Returns are normalized based on the prior market implied volatility reading. For example, if VIX = 20.0 on a
+        particular day, then the implied standard deviation of <i>monthly</i> returns = 20/100/sqrt(12) ~ 5.8%. Then,
+        observe the <i>lowest</i> SPX price over the ensuing 21 trading days, calculate the log return, and
+        divide by 5.8% to arrive at the worst 1 month standard deviation return.
+    </p>
+
 </body>
 </html>
