@@ -172,6 +172,13 @@ clear:both;
     text-align: left;
 	word-wrap: normal;
 }
+
+#straddlePlot {
+	margin: auto;
+  	width: 50%;
+  	padding: 40px;
+}
+
 /*----start header----*/
 #header {
 	padding:0px 0px 10px;

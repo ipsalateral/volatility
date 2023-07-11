@@ -1,8 +1,8 @@
 
 // SelectedValue is like "Ride Warpig" and will be highlighted
-export function updateTS() {
+export function updateStraddle() {
     var plotData;
-    fetch("spxlow.json")
+    fetch("straddle.json")
     .then(res => res.json())
     .then(data => {plotData = data;})
     .then(() => {
@@ -27,14 +27,14 @@ export function updateTS() {
             margin: {
                 l: 50,
                 r: 40,
-                b: 50,
-                t: 80,
-                pad: 4
+                b: 80,
+                t: 40,
+                // pad: 4
             },
             title: {
                 xref: 'paper',
                 // x:.9,
-                text:'Frequency of Large Negative 1-Month Returns on SPX <br> June 2006-Present',
+                text:'SPX Zero Day Straddle Price at 9:15 AM EST',
                 // xanchor:'right',
                 
             },
@@ -43,24 +43,24 @@ export function updateTS() {
                 color: '#FFFFFF'
             },
             xaxis: {
-                title: '1-Month Decline in Standard Deviations',
+                // title: '1-Month Decline in Standard Deviations',
                 color: 'FFFFFF',
                 gridcolor: '6E6E6E',
                 linecolor: '#FFFFFF',
                 ticks: 'outside',
                 // tick0: 1,
-                dtick: 1,
+                // dtick: 1,
                 tickcolor: '#000'
             },
             yaxis: {
-                title: 'Frequency',
+                title: 'Price $',
                 color: '#FFFFFF',
                 gridcolor: '#6E6E6E',
                 linecolor: '#FFFFFF',
                 // tick0: 0,
-                range: [0.0,.06],
+                // range: [0.0,.06],
                 // dtick: .01,
-                tickformat: '0.0%',
+                // tickformat: '0.0%',
                
             },
             legend: {
@@ -72,7 +72,7 @@ export function updateTS() {
             paper_bgcolor:'#000000'
         }
         // plotData.marker.color = plotData.y.map(name=>name==selectedValue? 'orange' :'#5BB2EA')
-        Plotly.newPlot('spxLowPlot',plotData,layout)
+        Plotly.newPlot('straddlePlot',plotData,layout)
     })
 }
-updateTS();
+updateStraddle();

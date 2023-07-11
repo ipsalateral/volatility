@@ -7,6 +7,14 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPLP300FM5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPLP300FM5');
+</script>
 
 <body>
      <!-- begin header -->
@@ -31,6 +39,8 @@
         observe the <i>lowest</i> SPX price over the ensuing 21 trading days, calculate the log return, and
         divide by 5.8% to arrive at the worst 1 month standard deviation return.
     </p>
+    <div id = 'straddlePlot',class = "plotly"></div>
+    <script type = "module" src = straddle.js></script>
 
 </body>
 </html>
