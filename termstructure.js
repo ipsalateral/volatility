@@ -29,7 +29,7 @@ export function updateTS() {
                 r: 40,
                 b: 60,
                 t: 30,
-                pad: 4
+                // pad: 0
             },
             title: {
                 xref: 'paper',
@@ -43,21 +43,23 @@ export function updateTS() {
             },
             xaxis: {
                 title: 'Trading Days To Maturity',
-                color: 'FFFFFF',
+                color: '#FFFFFF',
                 gridcolor: '6E6E6E',
-                linecolor: '#FFFFFF',
-                ticks: 'outside',
-                tick0: 0,
-                dtick: 20,
-                tickcolor: '#000'
+                linecolor: '6E6E6E',
+               
+                // tick0: 0,
+                dtick: 10,
+                // range: [0,150],
+                tickcolor: '6E6E6E'
             },
             yaxis: {
                 title: '',
                 color: '#FFFFFF',
                 range: [min_y,max_y],
                 gridcolor: '#6E6E6E',
-                linecolor: '#FFFFFF',
+                // linecolor: '#FFFFFF',
                 dtick: 1,
+                // ticks: 'outside',
                
             },
             legend: {

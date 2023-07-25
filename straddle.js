@@ -34,7 +34,7 @@ export function updateStraddle() {
             title: {
                 xref: 'paper',
                 // x:.9,
-                text:'SPX Zero Day Straddle Price at 9:15 AM EST',
+                text:'SPX Next Day Straddle Priced at 16:15 EST',
                 // xanchor:'right',
                 
             },
@@ -43,13 +43,10 @@ export function updateStraddle() {
                 color: '#FFFFFF'
             },
             xaxis: {
-                // title: '1-Month Decline in Standard Deviations',
                 color: 'FFFFFF',
                 gridcolor: '6E6E6E',
                 linecolor: '#FFFFFF',
                 ticks: 'outside',
-                // tick0: 1,
-                // dtick: 1,
                 tickcolor: '#000'
             },
             yaxis: {

@@ -38,6 +38,10 @@
         particular day, then the implied standard deviation of <i>monthly</i> returns = 20/100/sqrt(12) ~ 5.8%. Then,
         observe the <i>lowest</i> SPX price over the ensuing 21 trading days, calculate the log return, and
         divide by 5.8% to arrive at the worst 1 month standard deviation return.
+        <br><br>
+        Based on the chart above, a 1-month 3.5 standard deviation negative return has a 1 in 100 chance of occuring.
+        Conveniently, a 3.5 standard deviation return is just the VIX itself since sqrt(12) ~ 3.5. So if the VIX = 15.0,
+        we can say there is 1 in 100 chance that the max drawdown in the SPX over the next month will be greater than 15%.
     </p>
     <div id = 'straddlePlot',class = "plotly"></div>
     <script type = "module" src = straddle.js></script>
